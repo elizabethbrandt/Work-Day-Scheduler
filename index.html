@@ -18,21 +18,98 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
   <body>
+
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
+
     <div class="container">
-      <!-- Timeblocks go here -->
+
+      <!-- WHEN I scroll down -->
+      <!-- THEN I am presented with timeblocks for standard business hours -->
+      <div class="time-block row">
+
+        <span class="hour col-1">9AM</span>
+        <textarea type="text" class="col-10" id="text9"></textarea>
+        <button data-hour="9" type="button" class="saveBtn col-1 far fa-save"></button>
+
+      </div>
+
+      <div class="time-block row" id="row10">
+
+        <span class="hour col-1">10AM</span>
+        <textarea type="text" class="col-10" id="text9"></textarea>
+        <button data-hour="10" type="button" class="saveBtn col-1 far fa-save"></button>
+
+      </div>
+
+      <div class="time-block row" id="row11">
+
+        <span class="hour col-1">11AM</span>
+        <textarea type="text" class="col-10" id="text9"></textarea>
+        <button data-hour="11" type="button" class="saveBtn col-1 far fa-save"></button>
+
+      </div>
+
+      <div class="time-block row" id="row12">
+
+        <span class="hour col-1">12PM</span>
+        <textarea type="text" class="col-10" id="text9"></textarea>
+        <button data-hour="12" type="button" class="saveBtn col-1 far fa-save"></button>
+
+      </div>
+
+      <div class="time-block row" id="row13">
+
+        <span class="hour col-1">1PM</span>
+        <textarea type="text" class="col-10" id="text9"></textarea>
+        <button data-hour="13" type="button" class="saveBtn col-1 far fa-save"></button>
+
+      </div>
+
+      <div class="time-block row" id="row14">
+
+        <span class="hour col-1">2PM</span>
+        <textarea type="text" class="col-10" id="text9"></textarea>
+        <button data-hour="14" type="button" class="saveBtn col-1 far fa-save"></button>
+
+      </div>
+
+      <div class="time-block row" id="row15">
+
+        <span class="hour col-1">3PM</span>
+        <textarea type="text" class="col-10" id="text9"></textarea>
+        <button data-hour="15" type="button" class="saveBtn col-1 far fa-save"></button>
+
+      </div>
+
+      <div class="time-block row" id="row16">
+
+        <span class="hour col-1">4PM</span>
+        <textarea type="text" class="col-10" id="text9"></textarea>
+        <button data-hour="16" type="button" class="saveBtn col-1 far fa-save"></button>
+
+      </div>
+
+      <div class="time-block row" id="row17">
+
+        <span class="hour col-1">5PM</span>
+        <textarea type="text" class="col-10" id="text9"></textarea>
+        <button data-hour="17" type="button" class="saveBtn col-1 far fa-save"></button>
+
+      </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
