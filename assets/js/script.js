@@ -34,4 +34,8 @@ $("").on("click", function (event) {
 // THEN the saved events persist
     // GET eventInput
 
-
+// GET the current hour from the ‘event.target’ to reference the click button to trigger & fire off on the hour.
+// > var theClickedHour = $(event.target).data(“hour”)
+// > var theClickedHour $(even.target).parent().attr(“id”)
+// > var value = $(event.target).prev().val();
+// localStorage.setItem(“scheduler-hour-“+ theClickedHour, value);
