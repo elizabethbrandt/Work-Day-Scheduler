@@ -7,8 +7,9 @@ $("#currentDay").text(time.format("dddd, MMMM Do"));
 // THEN each timeblock is color coded to indicate whether it is in the past, present, or future
 var currentHour = time.hour();
 
-for (var i = 9; i <= 22; i++) {
+for (var i = 9; i <= 17; i++) {
 
+    // add classes to change color depending on the current time
     if (currentHour === i) {
         $(("#text" + i).toString()).addClass("present");
     } else if (currentHour < i) {
@@ -18,24 +19,16 @@ for (var i = 9; i <= 22; i++) {
 }
 
 console.log(currentHour);
-// WHEN I click into a timeblock
-// THEN I can enter an event
 
 // WHEN I click the save button for that timeblock
     // ADD .on("click")
-var saveButton = $("saveBtn");
-var eventInput = $("#text9");
 
-console.log(eventInput);
-
-saveButton.on("click", function () {
+$("").on("click", function (event) {
 // THEN the text for that event is saved in local storage
+    event.preventDefault();
     // SET eventInput
-    for (var i = 9; i <= 20; i++) {
-        localStorage.setItem(eventInput.val());
-    }
+    localStorage.setItem(eventInput.val());
 })
-
 
 // WHEN I refresh the page
 // THEN the saved events persist
