@@ -15,20 +15,20 @@ for (var i = 9; i <= 17; i++) {
     } else if (currentHour < i) {
         $(("#text" + i).toString()).addClass("future");
     } else (currentHour > i)
-        $(("#text" + i).toString()).addClass("past");
+    $(("#text" + i).toString()).addClass("past");
 }
 
 console.log(currentHour);
 
 // WHEN I click the save button for that timeblock
-    // ADD .on("click")
+// ADD .on("click")
 
 $("").on("click", function (event) {
-// THEN the text for that event is saved in local storage
+    // THEN the text for that event is saved in local storage
     event.preventDefault();
     // SET eventInput
     localStorage.setItem(eventInput.val());
-})
+});
 
 // WHEN I refresh the page
 // THEN the saved events persist
