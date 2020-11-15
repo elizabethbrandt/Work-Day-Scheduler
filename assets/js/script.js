@@ -16,26 +16,25 @@ for (var i = 9; i <= 17; i++) {
         $(("#text" + i).toString()).addClass("future");
     } else (currentHour > i)
     $(("#text" + i).toString()).addClass("past");
-}
 
-console.log(currentHour);
+    // WHEN I refresh the page
+    // THEN the saved events persist
+    // GET eventInput
+    var savedInfo = localStorage.getItem("Hour " + i);
+    $("#text" + i).text(savedInfo);
+
+}
 
 // WHEN I click the save button for that timeblock
 // ADD .on("click")
-
-$("").on("click", function (event) {
+$(".container").on("click", "button", saveEventInfo);
+function saveEventInfo(event) {
     // THEN the text for that event is saved in local storage
     event.preventDefault();
+    // Variable to get the hour from the same line that the button was clicked
+    var hourClicked = $(event.target).data("hour");
+    // Variable to get the text input from the same line where the button was clicked
+    var eventInput = $(event.target).prev().val();
     // SET eventInput
-    localStorage.setItem(eventInput.val());
-});
-
-// WHEN I refresh the page
-// THEN the saved events persist
-    // GET eventInput
-
-// GET the current hour from the ‘event.target’ to reference the click button to trigger & fire off on the hour.
-// > var theClickedHour = $(event.target).data(“hour”)
-// > var theClickedHour $(even.target).parent().attr(“id”)
-// > var value = $(event.target).prev().val();
-// localStorage.setItem(“scheduler-hour-“+ theClickedHour, value);
+    localStorage.setItem("Hour " + hourClicked, eventInput);
+}
